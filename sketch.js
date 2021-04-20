@@ -4,7 +4,7 @@ const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 var thunder, thunder1,thunder2,thunder3,thunder4;
 var batAnimation,bat;
-var drops;
+var drops = [];
 
 var engine, world;
 
@@ -38,7 +38,7 @@ function draw(){
     background(0); 
 
     for (var i = 0; i < 100; i++) {
-        drops = new createDrop(random(0,400), random(0,400));
+        drops.push(new createDrop(random(0,400), random(0,400)));
     }
 
     //creating thunder
@@ -78,8 +78,8 @@ function draw(){
 
     umbrella.display();
 
-    for(i = 0; i < maxDrops; i++){
-        drops[i].display();
+    for(var i = 0; i < 100; i++){
+        drops[i].showDrop();
         drops[i].update();
     }
 
