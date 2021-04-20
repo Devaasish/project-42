@@ -78,7 +78,6 @@ function draw(){
 
     umbrella.display();
 
-    //display rain drops
     for(i = 0; i < maxDrops; i++){
         drops[i].display();
         drops[i].update();
